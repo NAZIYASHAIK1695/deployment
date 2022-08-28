@@ -22,7 +22,7 @@ resource "aws_subnet" "public-subnet-2" {
 # Create 1st Private Subnet
 resource "aws_subnet" "private-subnet-1" {
   vpc_id = "${aws_vpc.myvpc.id}"
-  cidr_block = "${var.subnet5_cidr}"
+  cidr_block = "${var.subnet3_cidr}"
   map_public_ip_on_launch = true
   availability_zone = "us-east-2a"
   tags = {
@@ -32,7 +32,7 @@ resource "aws_subnet" "private-subnet-1" {
 # Create 2nd Private Subnet
 resource "aws_subnet" "private-subnet-2" {
   vpc_id = "${aws_vpc.myvpc.id}"
-  cidr_block = "${var.subnet6_cidr}"
+  cidr_block = "${var.subnet4_cidr}"
   map_public_ip_on_launch = true
   availability_zone = "us-east-2b"
   tags = {
